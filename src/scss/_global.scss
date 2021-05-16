@@ -1,0 +1,149 @@
+// Reset styles
+
+html {
+   box-sizing: border-box;
+}
+
+*, *:before, *:after{
+   box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+}
+
+nav, footer, header, aside{
+   display: block;
+}
+
+html, body {
+   scroll-behavior: smooth;
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+input, button, textarea {
+   font-family:inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   display: inline-block;
+   cursor: pointer;
+   border: none;
+   background: none;
+}
+
+button::-moz-focus-inner {
+   padding:0;
+   border:0;
+}
+
+a {
+   color: $color-black;
+   text-decoration: none;
+}
+
+a, a:visited, a:hover {
+   text-decoration: none;
+}
+
+ul {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-size: inherit;
+   margin: 0;
+   padding: 0;
+}
+// ......................
+
+body {
+   letter-spacing: 0.08em;
+   color: $color-black;
+   @include helvetica-normal;
+   font-family: Helvetica, 'HelveticaNeueCur-Regular', sans-serif;
+   font-weight: 400;
+}
+
+.container {
+   max-width: 1280px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.container-fluid {
+   max-width: 1630px;
+   margin: 0 auto;
+}
+
+.btn {
+   display: inline-block;
+   text-decoration: none;
+   text-align: center;
+   width: 182px;
+   height: 50px;
+   background: $color-black;
+   border-radius: 80px;
+   font-size: 16px;
+   line-height: 46px;
+   color: $color-white;
+   transition: all 0.2s ease-in-out;
+   @include helvetica-medium;
+   &:hover {
+      color: $color-gray;
+   }
+}
+
+.title {
+   text-transform: uppercase;
+   font-size: 60px;
+   line-height: 62px;
+   @include responsive-parameter(font-size, 60, 36, 1440, 320);
+   @include formula-bold;
+}
+
+.nofilled {
+   -webkit-text-stroke: 1px $color-black;
+   -webkit-text-fill-color: transparent;
+}
+
+.slick-dots {
+   display: flex;
+   margin: 0 auto;
+}
+
+.slick-dots li button {
+   background: rgba(#000000, 0.3);
+   border-radius: 50%;
+   font-size: 0;
+   width: 10px;
+   height: 10px;
+   margin-right: 10px;
+}
+
+.slick-dots li.slick-active button {
+   background: #000;
+}
+
+.slick-list {
+   margin: 0 -10px;
+}
+.slick-slide {
+   padding: 0 10px;
+}
+

@@ -1,0 +1,51 @@
+// fonts
+@mixin formula-bold {
+   font-family: "FormulaCondensed-Bold", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+@mixin helvetica-normal {
+   font-family: "HelveticaNeueCur-Regular", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+@mixin helvetica-medium {
+   font-family: "HelveticaNeueCur-Medium", sans-serif;
+   font-weight: 500;
+   font-style: normal;
+}
+
+@mixin helvetica-bold {
+   font-family: "HelveticaNeueCur-Bold", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+
+@mixin responsive-parameter($parameter, $pcSize, $mobSize, $maxSize, $minSize) {
+   $addSize: $pcSize - $mobSize;
+   $maxWidth: $maxSize - $minSize;
+   // змінюємо параметр в інтервалі від $minSize до $maxSize
+   @media (max-width: #{$maxSize + px}) and (min-width: #{$minSize + px}){
+      #{$parameter}: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$minSize + px}) / #{$maxWidth}));
+   }
+}
+
+$maxWidth: 1240;
+@mixin adaptiv-parameter($param, $pcSize, $mobSize, $minSize) {
+   $addSize: $pcSize - $mobSize;
+   $maxWidth: $maxWidth - $minSize;
+   #{$param}: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$minSize + px}) / #{$maxWidth}));
+}
+// ----------------------------
+
+// colors
+$color-white: #fff;
+$color-black: #000;
+$color-lightgray: #808080;
+$color-gray: #d4d4d4;
+$color-orange: #ffb884;
+$color-blue: #cbe5fe;
+$color-pink: #ffeaf7;
