@@ -19,57 +19,61 @@ $(function(){
       dots: true,
    });
 
-   $('.inspiration__slider').slick({
+   $(".inspiration__slider").slick({
       infinite: true,
       slidesToShow: 5,
       slidesToScroll: 1,
       rows: 2,
       arrows: true,
-      prevArrow: "<button class='inspiration__slider-arrow inspiration__arrow-left'> <img class='a-left control-c prev slick-prev' src='./img/arrow-left.svg'> </button>",
-      nextArrow: "<button class='inspiration__slider-arrow inspiration__arrow-right'> <img class='a-right control-c next slick-next' src='./img/arrow-right.svg'> </button>",
+      prevArrow:
+         "<button aria-label='arrow-left' class='inspiration__slider-arrow inspiration__arrow-left'> <img aria-hidden='true' alt='' class='a-left control-c prev slick-prev' src='./img/arrow-left.svg'> </button>",
+      nextArrow:
+         "<button aria-label='arrow-right' class='inspiration__slider-arrow inspiration__arrow-right'> <img aria-hidden='true' alt='' class='a-right control-c next slick-next' src='./img/arrow-right.svg'> </button>",
       responsive: [
          {
             breakpoint: 1200,
             settings: {
                slidesToShow: 4,
-            }
+            },
          },
          {
             breakpoint: 992,
             settings: {
                slidesToShow: 3,
-            }
+            },
          },
          {
             breakpoint: 576,
             settings: {
                slidesToShow: 2,
                rows: 1,
-            }
-         }
-      ]
+            },
+         },
+      ],
    });
 
-   $('.preview__slider').slick({
+   $(".preview__slider").slick({
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
-      prevArrow: "<button class='preview__slider-arrow preview__arrow-left'> <img class='a-left control-c prev slick-prev' src='./img/arrow-rectleft.svg'> </button>",
-      nextArrow: "<button class='preview__slider-arrow preview__arrow-right'> <img class='a-right control-c next slick-next' src='./img/arrow-rectright.svg'> </button>",
+      prevArrow:
+         "<button aria-label='arrow-left' class='preview__slider-arrow preview__arrow-left'> <img aria-hidden='true' alt='' class='a-left control-c prev slick-prev' src='./img/arrow-rectleft.svg'> </button>",
+      nextArrow:
+         "<button aria-label='arrow-right' class='preview__slider-arrow preview__arrow-right'> <img aria-hidden='true' alt='' class='a-right control-c next slick-next' src='./img/arrow-rectright.svg'> </button>",
       responsive: [
          {
             breakpoint: 1200,
             settings: {
                slidesToShow: 3,
-            }
+            },
          },
          {
             breakpoint: 900,
             settings: {
                slidesToShow: 2,
-            }
-         }
-      ]
+            },
+         },
+      ],
    });
 
    // tile border animation
@@ -108,7 +112,7 @@ $(function(){
       $(".tabs-content__item").removeClass("tabs-content__item--active");
 
       $(this).addClass("tabs-triggers__item--active");
-      $($(this).attr('href')).addClass("tabs-content__item--active");
+      $("#" + $(this).attr("aria-describedby")).addClass("tabs-content__item--active");
    });
 
    // smoothScroll

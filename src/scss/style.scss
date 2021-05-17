@@ -40,7 +40,7 @@
       position: relative;
       font-size: 15px;
       line-height: 15px;
-      
+
       @include helvetica-medium;
       &::before {
          content: '';
@@ -86,13 +86,13 @@
    }
 }
 
-// burger menu when disabled 
+// burger menu when disabled
 .burger {
    display: none;
 }
 
 @media (max-width: 767px) {
-   // ===> menu activation <=== 
+   // ===> menu activation <===
 
    // block body scroll
    .body-lock {
@@ -149,7 +149,7 @@
       position: relative;
       z-index: 5;
    }
-   // ===X menu activation X=== 
+   // ===X menu activation X===
 
    .burger {
       display: flex;
@@ -167,7 +167,7 @@
          display: inline-block;
          font-size: 16px;
          margin-left: 6px;
-         user-select: none; 
+         user-select: none;
          @include helvetica-medium;
       }
    }
@@ -191,7 +191,7 @@
    }
 }
 
-// burger menu when active 
+// burger menu when active
 .burger--active {
    // Height of burger  and  height of line
    @include normalizeOnChange(10px, 2px);
@@ -324,7 +324,7 @@
    &__inner {
       display: flex;
       align-items: center;
-      
+
       min-height: 500px;
    }
    &__about {
@@ -361,7 +361,7 @@
       flex: 0 0 45%;
       transform: translate(-100%, 0);
    }
-   
+
 }
 @media (max-width: 768px) {
    .meet__inner {
@@ -370,7 +370,7 @@
    .meet__about {
       width: 100%;
    }
-   .meet__image img {  
+   .meet__image img {
       object-fit: fill;
       min-width: 320px;
       min-height: 300px;
@@ -404,12 +404,12 @@
    }
    &__slider-image {
       width: 530px;
-      height: 320px; 
-      @include responsive-parameter(width, 530, 260, 1440, 768); 
-      @include responsive-parameter(width, 260, 220, 768, 320); 
-      @include responsive-parameter(height, 320, 156, 1440, 768); 
-      @include responsive-parameter(height, 156, 134, 768, 320);   
-      margin: auto;   
+      height: 320px;
+      @include responsive-parameter(width, 530, 260, 1440, 768);
+      @include responsive-parameter(width, 260, 220, 768, 320);
+      @include responsive-parameter(height, 320, 156, 1440, 768);
+      @include responsive-parameter(height, 156, 134, 768, 320);
+      margin: auto;
    }
    &__content {
       display: flex;
@@ -422,7 +422,7 @@
       margin-top: 130px;
       margin-left: 108px;
       @include responsive-parameter(margin-top, 130, 60, 1440, 768);
-      @include responsive-parameter(margin-left, 108, 40, 1440, 768); 
+      @include responsive-parameter(margin-left, 108, 40, 1440, 768);
    }
    &__content-item {
       margin-bottom: 20px;
@@ -433,7 +433,7 @@
    &__subtitle {
       font-size: 18px;
       line-height: 46px;
-      color: rgba(0, 0, 0, 0.5);
+      color: rgba(0, 0, 0, 0.6);
       text-transform: uppercase;
    }
    &__size {
@@ -451,7 +451,7 @@
    }
    &__sizes-btn {
       width: 287px;
-      height: 50px;  
+      height: 50px;
       font-size: 14px;
       border: 1px solid rgba(0, 0, 0, 0.4);
       border-radius: 30px;
@@ -514,7 +514,7 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       // margin-right: 22px;
-      color: rgba(0, 0, 0, 0.4);
+      color: rgba(0, 0, 0, 0.6);
    }
    &__item--active {
       color: $color-black;
@@ -588,6 +588,9 @@
       display: block !important;
       // padding: 15px;
       // flex: 0 0 20%;
+      img {
+         object-fit: contain;
+      }
    }
    &__slider-arrow {
       position: absolute;
@@ -673,7 +676,7 @@
    &__image img {
       display: block;
       margin: 0 auto;
-      width: 70%;
+      width: 55%;
       min-width: 300px;
    }
 }
@@ -842,6 +845,7 @@
       @include responsive-parameter(margin-left, 350, 75, 1440, 769);
    }
    &__contacts-phrase {
+      display: inline-block;
       font-size: 15px;
       line-height: 27px;
       margin: 20px 0 15px;
@@ -872,7 +876,7 @@
    .footer__contacts-box {
       margin-left: 50px;
    }
-   .footer__mail { 
+   .footer__mail {
       padding: 0 60px 0 20px;
       @include responsive-parameter(width, 300, 200, 768, 320);
    }

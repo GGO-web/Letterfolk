@@ -145,5 +145,9 @@ body {
 }
 .slick-slide {
    padding: 0 10px;
+   img {
+      object-fit: cover;
+      max-width: 100%;
+   }
 }
 
