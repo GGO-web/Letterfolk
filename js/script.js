@@ -25,8 +25,8 @@ $(function(){
       slidesToScroll: 1,
       rows: 2,
       arrows: true,
-      prevArrow: "<button class='inspiration__slider-arrow inspiration__arrow-left'> <img class='a-left control-c prev slick-prev' src='../img/arrow-left.svg'> </button>",
-      nextArrow: "<button class='inspiration__slider-arrow inspiration__arrow-right'> <img class='a-right control-c next slick-next' src='../img/arrow-right.svg'> </button>",
+      prevArrow: "<button class='inspiration__slider-arrow inspiration__arrow-left'> <img class='a-left control-c prev slick-prev' src='./img/arrow-left.svg'> </button>",
+      nextArrow: "<button class='inspiration__slider-arrow inspiration__arrow-right'> <img class='a-right control-c next slick-next' src='./img/arrow-right.svg'> </button>",
       responsive: [
          {
             breakpoint: 1200,
@@ -54,8 +54,8 @@ $(function(){
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
-      prevArrow: "<button class='preview__slider-arrow preview__arrow-left'> <img class='a-left control-c prev slick-prev' src='../img/arrow-rectleft.svg'> </button>",
-      nextArrow: "<button class='preview__slider-arrow preview__arrow-right'> <img class='a-right control-c next slick-next' src='../img/arrow-rectright.svg'> </button>",
+      prevArrow: "<button class='preview__slider-arrow preview__arrow-left'> <img class='a-left control-c prev slick-prev' src='./img/arrow-rectleft.svg'> </button>",
+      nextArrow: "<button class='preview__slider-arrow preview__arrow-right'> <img class='a-right control-c next slick-next' src='./img/arrow-rectright.svg'> </button>",
       responsive: [
          {
             breakpoint: 1200,
@@ -80,10 +80,10 @@ $(function(){
       prevTile = this;
    });
 
-   //  buttons price 'mat' calculate 
+   //  buttons price 'mat' calculate
    let curCount = Number($(".customize__count-number").text());
    let curPrice = Number($(".customize__price-total").text().slice(0, -1));
-   let startMatPrice = 75; 
+   let startMatPrice = 75;
 
    $(".customize__count-minus").click(() => {
       if (curCount > 1) {
